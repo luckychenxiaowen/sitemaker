@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>飞站 - 一键网站生成器</title>
+<link rel="stylesheet" href="/src/ui/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="app">
+  <header class="app-header">
+    <div class="brand"><span class="brand-icon">&#x1F6F8;</span>飞站</div>
+    <p class="brand-sub">一键网站生成器 &mdash; 选择类型、风格、功能，几秒完成</p>
+  </header>
+
+  <!-- 步骤指示器 -->
+  <div class="stepper">
+    <div class="step active" data-step="1">
+      <div class="step-dot">1</div>
+      <span>选择类型</span>
+    </div>
+    <div class="step-connector"></div>
+    <div class="step" data-step="2">
+      <div class="step-dot">2</div>
+      <span>选择风格</span>
+    </div>
+    <div class="step-connector"></div>
+    <div class="step" data-step="3">
+      <div class="step-dot">3</div>
+      <span>配置功能</span>
+    </div>
+    <div class="step-connector"></div>
+    <div class="step" data-step="4">
+      <div class="step-dot">4</div>
+      <span>生成网站</span>
+    </div>
+  </div>
+
+  <main class="main-content">
+    <!-- 步骤1: 选择网站类型 -->
+    <section class="wizard-step active" id="step1">
+      <h2 class="step-title">&#x1F3E0; 选择要生成什么类型的网站？</h2>
+      <div class="card-grid" id="typeGrid"></div>
+    </section>
+
+    <!-- 步骤2: 选择设计风格 -->
+    <section class="wizard-step" id="step2">
+      <h2 class="step-title">&#x1F3A8; 选择你喜欢的设计风格</h2>
+      <p class="step-desc">10种网上最流行的CSS设计风格</p>
+      <div class="card-grid" id="styleGrid"></div>
+    </section>
+
+    <!-- 步骤3: 配置功能 -->
+    <section class="wizard-step" id="step3">
+      <h2 class="step-title">&#x2699;&#xFE0F; 网站需要哪些功能和效果？</h2>
+      <div class="config-panel">
+        <div class="config-group">
+          <h3>功能模块（可多选）</h3>
+          <div class="feature-grid" id="featureGrid"></div>
+        </div>
+        <div class="config-group">
+          <h3>网站层级深度</h3>
+          <div class="level-grid" id="levelGrid">
+            <label class="level-card">
+              <input type="radio" name="pages" value="1" checked>
+              <div class="level-card-inner">
+                <span class="level-num">1层</span>
+                <span class="level-desc">单页展示</span>
+              </div>
+            </label>
+            <label class="level-card">
+              <input type="radio" name="pages" value="2">
+              <div class="level-card-inner">
+                <span class="level-num">2层</span>
+                <span class="level-desc">标准官网</span>
+              </div>
+            </label>
+            <label class="level-card">
+              <input type="radio" name="pages" value="3">
+              <div class="level-card-inner">
+                <span class="level-num">3层</span>
+                <span class="level-desc">完整官网</span>
+              </div>
+            </label>
+          </div>
+        </div>
+        <div class="config-group">
+          <h3>自定义内容（可选）</h3>
+          <input type="text" id="siteTitle" placeholder="网站标题，如：XX科技有限公司" class="text-input">
+          <input type="text" id="siteSubtitle" placeholder="网站副标题，如：让科技改变生活" class="text-input">
+          <textarea id="siteAbout" placeholder="关于我们内容…" rows="3" class="text-input"></textarea>
+        </div>
+      </div>
+    </section>
+
+    <!-- 步骤4: 确认并生成 -->
+    <section class="wizard-step" id="step4">
+      <h2 class="step-title">&#x2705; 确认配置并生成</h2>
+      <div class="summary-card">
+        <div class="summary-row"><span class="summary-label">网站类型</span><span class="summary-val" id="smType">-</span></div>
+        <div class="summary-row"><span class="summary-label">设计风格</span><span class="summary-val" id="smStyle">-</span></div>
+        <div class="summary-row"><span class="summary-label">功能模块</span><span class="summary-val" id="smFeatures">-</span></div>
+        <div class="summary-row"><span class="summary-label">网站层级</span><span class="summary-val" id="smPages">-</span></div>
+      </div>
+      <button class="btn-generate" id="generateBtn" disabled>
+        <span class="btn-icon">&#x1F680;</span> 开始生成
+      </button>
+      <div class="progress-container" id="progressContainer" style="display:none;">
+        <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+        <p class="progress-text" id="progressText">正在初始化...</p>
+      </div>
+      <div class="status-box" id="statusBox"></div>
+    </section>
+
+    <!-- 结果展示 -->
+    <section class="result-section" id="resultSection" style="display:none;">
+      <div id="resultSuccess" style="display:none;">
+        <div class="success-header">
+          <div class="success-icon">&#x2705;</div>
+          <h2>网站生成成功!</h2>
+        </div>
+        <div class="site-preview" id="sitePreview"></div>
+        <div class="result-actions">
+          <a href="#" class="action-btn primary" id="previewBtn" target="_blank">&#x1F441; 预览网站</a>
+          <button class="action-btn secondary" id="codeBtn">&#x1F4C2; 查看源代码结构</button>
+          <button class="action-btn secondary" id="exportBtn">&#x1F4E5; 一键导出代码</button>
+        </div>
+        <div class="code-structure" id="codeStructure" style="display:none;">
+          <h3>源代码结构</h3>
+          <pre id="codeTree"></pre>
+        </div>
+      </div>
+      <div id="resultError" style="display:none;">
+        <div class="error-header">
+          <div class="error-icon">&#x274C;</div>
+          <h2>生成失败</h2>
+        </div>
+        <div class="error-box">
+          <p class="error-msg" id="errorMsg"></p>
+          <details>
+            <summary>查看详细错误</summary>
+            <pre id="errorDetail"></pre>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 历史记录 -->
+    <section class="history-section" id="historySection">
+      <h3>&#x1F4DC; 历史记录 <button class="btn-clear" id="clearHistoryBtn" style="display:none;">清空</button></h3>
+      <div class="history-list" id="historyList">
+        <p class="empty-state">暂无历史记录，来生成第一个网站吧!</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- 底部导航 -->
+  <nav class="bottom-nav">
+    <button class="nav-btn" id="prevBtn" disabled>上一步</button>
+    <span class="step-indicator" id="stepIndicator">1 / 4</span>
+    <button class="nav-btn primary" id="nextBtn">下一步</button>
+  </nav>
+</div>
+
+<script src="/src/ui/app.js"></script>
+</body>
+</html>

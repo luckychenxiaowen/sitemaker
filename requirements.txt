@@ -1,0 +1,8 @@
+# Feizhan (飞站) - Zero external dependencies!
+# The entire project uses only Python standard library.
+# No pip install required. Just run:
+#
+#   python feizhan.py --ui
+#
+# If you want optional enhancements:
+# none yet - stay tuned for v3.0!

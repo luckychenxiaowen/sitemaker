@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Project specific
+outputs/*
+!outputs/.gitkeep
+*.log
+*.tmp
+
+# Generated sites (keep outputs dir but ignore contents)
+飞站skill/outputs/*
+!飞站skill/outputs/.gitkeep
