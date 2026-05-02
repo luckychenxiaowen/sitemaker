@@ -3,16 +3,16 @@
 > **Turn one prompt into a complete website. 5 site types × 10 CSS styles × 12 feature modules.**
 > An open-source AI-powered website generator for landing pages, portfolios, blogs, and forums. Built for makers who ship fast.
 
-[![GitHub stars](https://img.shields.io/github/stars/luckychenxiaowen/feizhan?style=social)](https://github.com/luckychenxiaowen/feizhan)
+[![GitHub stars](https://img.shields.io/github/stars/luckychenxiaowen/sitemaker?style=social)](https://github.com/luckychenxiaowen/sitemaker)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Python Version](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://python.org)
-[![Version](https://img.shields.io/badge/version-2.0-purple.svg)](https://github.com/luckychenxiaowen/feizhan/releases)
+[![Version](https://img.shields.io/badge/version-2.0-purple.svg)](https://github.com/luckychenxiaowen/sitemaker/releases)
 
 [English](#english) | [中文文档](#中文)
 
 [🚀 Quick Start](#quick-start) · [✨ Features](#features) · [🎨 Styles](#design-styles) · [📖 Docs](docs/) · [🤝 Contributing](CONTRIBUTING.md)
 
-[![Star History Chart](https://api.star-history.com/svg?repos=luckychenxiaowen/feizhan&type=Date)](https://star-history.com/#luckychenxiaowen/feizhan&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=luckychenxiaowen/sitemaker&type=Date)](https://star-history.com/#luckychenxiaowen/sitemaker&Date)
 
 ---
 
@@ -47,7 +47,7 @@
 
 ```bash
 # Clone the repo
-git clone https://github.com/luckychenxiaowen/feizhan.git
+git clone https://github.com/luckychenxiaowen/sitemaker.git
 cd feizhan/飞站skill
 
 # Install dependencies (stdlib only — zero external deps!)
@@ -181,7 +181,7 @@ MIT © [Your Name](https://github.com/luckychenxiaowen)
 ### ⚡ 30秒上手
 
 ```bash
-git clone https://github.com/luckychenxiaowen/feizhan.git
+git clone https://github.com/luckychenxiaowen/sitemaker.git
 cd feizhan/飞站skill
 python feizhan.py --ui
 # 浏览器打开 http://localhost:8765
@@ -207,5 +207,5 @@ python feizhan.py --ui
 
 <p align="center">
   Made with ❤️ by the Feizhan Team | 
-  <a href="https://github.com/luckychenxiaowen/feizhan">⭐ Star us on GitHub!</a>
+  <a href="https://github.com/luckychenxiaowen/sitemaker">⭐ Star us on GitHub!</a>
 </p>

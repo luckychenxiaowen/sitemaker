@@ -40,5 +40,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 - 1-3 page levels
 - Basic feature module support (5 of 12)
 
-[2.0.0]: https://github.com/luckychenxiaowen/feizhan/compare/v1.0.0...v2.0.0
-[1.0.0]: https://github.com/luckychenxiaowen/feizhan/releases/tag/v1.0.0
+[2.0.0]: https://github.com/luckychenxiaowen/sitemaker/compare/v1.0.0...v2.0.0
+[1.0.0]: https://github.com/luckychenxiaowen/sitemaker/releases/tag/v1.0.0

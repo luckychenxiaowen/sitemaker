@@ -10,13 +10,13 @@ Be respectful. Be constructive. Be kind.
 
 ### 🐛 Bug Reports
 
-1. Search [existing issues](https://github.com/luckychenxiaowen/feizhan/issues) first
+1. Search [existing issues](https://github.com/luckychenxiaowen/sitemaker/issues) first
 2. Use the Bug Report template
 3. Include: Python version, OS, error message, steps to reproduce
 
 ### ✨ Feature Requests
 
-1. Check [existing requests](https://github.com/luckychenxiaowen/feizhan/issues)
+1. Check [existing requests](https://github.com/luckychenxiaowen/sitemaker/issues)
 2. Describe the problem your feature solves
 3. Suggest an approach if you have one
 
@@ -24,7 +24,7 @@ Be respectful. Be constructive. Be kind.
 
 ```bash
 # 1. Fork & clone
-git clone https://github.com/YOUR_USERNAME/feizhan.git
+git clone https://github.com/YOUR_USERNAME/sitemaker.git
 cd feizhan
 
 # 2. Create a branch
@@ -74,7 +74,7 @@ python feizhan.py --help  # See all commands
 
 ## Getting Help
 
-- Open a [Discussion](https://github.com/luckychenxiaowen/feizhan/discussions)
+- Open a [Discussion](https://github.com/luckychenxiaowen/sitemaker/discussions)
 - Tag maintainers in issues
 - Response time: within 48 hours
 

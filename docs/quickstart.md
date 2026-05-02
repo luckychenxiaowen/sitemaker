@@ -5,7 +5,7 @@
 ## 1. Install
 
 ```bash
-git clone https://github.com/YOUR_NAME/feizhan.git
+git clone https://github.com/YOUR_NAME/sitemaker.git
 cd feizhan/飞站skill
 ```
 
