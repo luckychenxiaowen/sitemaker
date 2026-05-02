@@ -19,7 +19,14 @@
 ## 🎬 Demo
 
 <p align="center">
-  <img src="assets/demo-ui.gif" alt="Feizhan UI Demo" width="800"/>
+  <img src="assets/demo-ui.png" alt="Feizhan Visual UI" width="800"/>
+  <br/><em>4-Step Visual Wizard UI</em>
+</p>
+
+<p align="center">
+  <img src="assets/demo-site-neumorphic.png" alt="Neumorphic Style - Product Crowdfunding" width="400"/>
+  <img src="assets/demo-site-dark.png" alt="Dark Mode - Blog" width="400"/>
+  <br/><em>Left: Neumorphic Product Page | Right: Dark Mode Blog</em>
 </p>
 
 ## ✨ Features
